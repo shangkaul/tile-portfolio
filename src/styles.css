@@ -28,7 +28,7 @@
     background-color: white;
     opacity: 0.5;
     color:black;
-    /* transition: ease-in 0.5s; */
+    transition: ease-in 0.5s;
     font-weight: 800;
     font-size: 1rem;
     height: 100%;
