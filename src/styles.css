@@ -1,0 +1,44 @@
+.content{
+    position: relative;
+    margin-left: 20vw ;
+    margin-top: 5vh;
+}
+.row{
+    height: 90vh;
+}
+.col-sm-3{
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.tile{
+    margin-bottom: auto;
+    background:url('http://parthjariwala.com/assets/images/1.jpg');
+    background-size: cover;
+    height: 100%;
+}
+.tile > .tileContent{
+    color:transparent;
+    background: transparent;
+    padding-top: 30%;
+    height: 100%;
+}
+.tile > .tileContent:hover{
+    background-color: white;
+    opacity: 0.5;
+    color:black;
+    /* transition: ease-in 0.5s; */
+    font-weight: 800;
+    font-size: 1rem;
+    height: 100%;
+}
+@media screen and (max-width: 1024px) {
+    
+    .content{
+        margin-top: 25vh;
+        margin-left: 3rem;
+        max-width: 75vw;
+        overflow: hidden;
+    }
+  }
