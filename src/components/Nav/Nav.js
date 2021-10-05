@@ -12,13 +12,13 @@ export default function Nav(props)
            <li><Link to='/' className="link"> Doe </Link></li>
            </div>
            <li><Link to='/' className="link"> Home </Link></li>
-           <li><Link to='/' className="link">About </Link></li>
-           <li><Link to='/' className="link">Projects </Link></li>
-           <li><Link to='/' className="link">Work </Link></li>
-           <li><Link to='/' className="link">Services </Link></li>
-           <li><Link to='/' className="link">Testimonials </Link></li>
-           <li><Link to='/' className="link">Clients </Link></li>
-           <li><Link to='/' className="link">Contact </Link></li>
+           <li><Link to='/about' className="link">About </Link></li>
+           <li><Link to='/about' className="link">Projects </Link></li>
+           <li><Link to='/about' className="link">Work </Link></li>
+           <li><Link to='/about' className="link">Services </Link></li>
+           <li><Link to='/about' className="link">Testimonials </Link></li>
+           <li><Link to='/about' className="link">Clients </Link></li>
+           <li><Link to='/about' className="link">Contact </Link></li>
 
            <div className="footer">
                <a style={{paddingLeft:"1.5rem"}} href="/"><FaLinkedin/></a>
