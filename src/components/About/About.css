@@ -1,0 +1,38 @@
+.About{
+    position: relative;
+    margin-left: 20vw ;
+    margin-top: 5vh;
+}
+.header{
+    text-align: center;
+    padding:2rem;
+    font-size:3rem;
+    font-weight: 600;
+}
+.text{
+    text-align: left;
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 1rem;
+}
+.text >h3{
+    margin:1rem 0;
+}
+@media screen and (max-width: 1024px) {
+    
+    .About{
+        margin-top: 25vh;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    .text{
+        text-align: left;
+        max-width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding:0 1rem;
+    }
+  }
