@@ -14,7 +14,7 @@
 
 .tile{
     margin-bottom: auto;
-    background:url('http://parthjariwala.com/assets/images/1.jpg');
+    background:url('../public//1.jpg');
     background-size: cover;
     height: 100%;
 }
