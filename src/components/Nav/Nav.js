@@ -1,5 +1,6 @@
 import "./Nav.css";
 import {FaLinkedin, FaTwitter, FaInstagram, FaGithub} from "react-icons/fa";
+import {AiOutlineMenu} from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export default function Nav(props)
@@ -26,6 +27,7 @@ export default function Nav(props)
                <a href="/"><FaGithub/></a>
 
            </div>
+           <div className="navBtn"><AiOutlineMenu/></div>
        </div>
    )    
 }

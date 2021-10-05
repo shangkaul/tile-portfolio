@@ -74,7 +74,9 @@
     color: white;
 }
 
-
+.navBtn{
+    display: none;
+}
 @media screen and (max-width: 1024px) {
     
     .Nav{
@@ -87,19 +89,47 @@
     background-color: black;
     transition: 0.5s ease;
     padding-top:20px;
+    padding-left:20px;
     align-items: left;
-    padding: 1rem;
+    padding: 0;
     display: inline-block;
 
     }
+    /* .Nav > li {
+        color: var(--primary);
+        padding: 1rem;
+        list-style: none;
+        display: inline-block;
+        border-bottom: none;
+    } */
     .Nav > li {
         color: var(--primary);
         padding: 1rem;
         list-style: none;
         display: inline-block;
         border-bottom: none;
+        display: none;
     }
     .footer{
         display: none;
+    }      
+    .logo > li{
+        padding:0;
+        
+    }
+    .logo{
+        margin:0;
+        color: white;
+    }
+    .navBtn{
+        display: inline-block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        
     }
   }
