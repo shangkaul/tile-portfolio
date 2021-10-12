@@ -1,4 +1,6 @@
 import "./About.css";
+import Footer from "../Footer/footer";
+
  export default function About()
  {
      return(
@@ -31,7 +33,9 @@ This project is projected to take between 75 and 80 hours to complete.
 
 Difficulty level
 It is ideal for Java and web development developers with good hands-on experience since it allows them to create code in core Java, begin using powerful Java frameworks, and learn to construct strong scalable applications. It is not a suitable place to start for beginners since they will struggle to learn too many things at once in order to complete this project.
+<Footer/>
              </div>
+           
          </div>
      )
  }
