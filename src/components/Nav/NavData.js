@@ -2,8 +2,9 @@ import React from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as SiIcons from "react-icons/si";
-import * as GrIcons from "react-icons/gr";
+import * as BsIcons from "react-icons/bs";
 import * as MdIcons from "react-icons/md";
+import * as RiIcons from "react-icons/ri";
 
 export const NavbarData = [
   {
@@ -21,7 +22,7 @@ export const NavbarData = [
   {
     title: "Projects",
     path: "/projects",
-    icon: <GrIcons.GrProjects />,
+    icon: <RiIcons.RiFileEditFill />,
     cName: "nav-text",
   },
   {
@@ -33,7 +34,7 @@ export const NavbarData = [
   {
     title: "Services",
     path: "/services",
-    icon: <GrIcons.GrServices />,
+    icon: <BsIcons.BsGearFill />,
     cName: "nav-text",
   },
   {
