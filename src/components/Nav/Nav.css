@@ -71,3 +71,16 @@
 span {
   margin-left: 16px;
 }
+.footer {
+  position: absolute;
+  bottom: 15px;
+  font-size: 1.2rem;
+}
+.footer > a {
+  text-decoration: none;
+  color: var(--primary);
+  padding: 0 0.5rem;
+}
+.footer > a:hover {
+  color: white;
+}

@@ -37,6 +37,20 @@ export default function Nav(props) {
               );
             })}
           </ul>
+          <div className="footer">
+            <a style={{ paddingLeft: "1.5rem" }} href="/">
+              <FaIcons.FaLinkedin />
+            </a>
+            <a href="/">
+              <FaIcons.FaInstagram />
+            </a>
+            <a href="/">
+              <FaIcons.FaTwitter />
+            </a>
+            <a href="/">
+              <FaIcons.FaGithub />
+            </a>
+          </div>
         </nav>
       </IconContext.Provider>
     </>
