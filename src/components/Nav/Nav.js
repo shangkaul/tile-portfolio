@@ -26,6 +26,9 @@ export default function Nav(props) {
                 <AiIcons.AiOutlineClose style={closeStyle} />
               </Link>
             </li>
+            <li className="nav-name">
+              <Link to="/">John Doe</Link>
+            </li>
             {NavbarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>

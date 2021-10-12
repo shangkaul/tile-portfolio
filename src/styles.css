@@ -21,7 +21,7 @@
 .tile > .tileContent {
   color: transparent;
   background: transparent;
-  padding-top: 30%;
+  padding-top: 40%;
   height: 100%;
 }
 .tile > .tileContent:hover {
@@ -35,7 +35,6 @@
 }
 @media screen and (max-width: 1024px) {
   .content {
-    margin-top: 25vh;
     margin-left: 3rem;
     max-width: 75vw;
     overflow: hidden;
