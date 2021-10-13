@@ -36,11 +36,11 @@
   position: absolute;
   top: 0;
   left: -100%;
-  transition: 50ms;
+  transition: 1ms;
 }
 .backdrop.active {
   left: 0;
-  transition: 50ms;
+  transition: 1ms;
 }
 
 .nav-text {
