@@ -1,33 +1,69 @@
 import "./Nav.css";
-import {FaLinkedin, FaTwitter, FaInstagram, FaGithub} from "react-icons/fa";
-import {AiOutlineMenu} from "react-icons/ai";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { NavbarData } from "./NavData";
+import { IconContext } from "react-icons";
 
-export default function Nav(props)
-{
-   return(
-       <div className="Nav">
-           <div className="logo">
-           <li><Link to='/' className="link"> John </Link></li>
-           <li><Link to='/' className="link"> Doe </Link></li>
-           </div>
-           <li><Link to='/' className="link"> Home </Link></li>
-           <li><Link to='/about' className="link">About </Link></li>
-           <li><Link to='/about' className="link">Projects </Link></li>
-           <li><Link to='/about' className="link">Work </Link></li>
-           <li><Link to='/about' className="link">Services </Link></li>
-           <li><Link to='/about' className="link">Testimonials </Link></li>
-           <li><Link to='/about' className="link">Clients </Link></li>
-           <li><Link to='/about' className="link">Contact </Link></li>
-
-           <div className="footer">
-               <a style={{paddingLeft:"1.5rem"}} href="/"><FaLinkedin/></a>
-               <a href="/"><FaInstagram/></a>
-               <a href="/"><FaTwitter/></a>
-               <a href="/"><FaGithub/></a>
-
-           </div>
-           <div className="navBtn"><AiOutlineMenu/></div>
-       </div>
-   )    
+export default function Nav(props) {
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
+  let barStyle = { color: "black", fontSize: "2rem" };
+  let closeStyle = { color: "white", fontSize: "2rem" };
+  return (
+    <>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <div className="Nav">
+          <Link to="#" className="menu-bars">
+            <FaIcons.FaBars onClick={showSidebar} style={barStyle} />
+          </Link>
+        </div>
+        <div
+          className={sidebar ? "backdrop active" : "backdrop"}
+          onClick={showSidebar}
+        >
+          <nav
+            className={sidebar ? "nav-menu active" : "nav-menu"}
+            onClick={(e) => e.stopPropagation()} // Prevent click from closing card
+          >
+            <ul className="nav-menu-items" onClick={showSidebar}>
+              <li className="navbar-toggle">
+                <Link to="#" className="menu-close">
+                  <AiIcons.AiOutlineClose style={closeStyle} />
+                </Link>
+              </li>
+              <li className="nav-name">
+                <Link to="/">John Doe</Link>
+              </li>
+              {NavbarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <Link to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="footer">
+              <a style={{ paddingLeft: "1.5rem" }} href="/">
+                <FaIcons.FaLinkedin />
+              </a>
+              <a href="/">
+                <FaIcons.FaInstagram />
+              </a>
+              <a href="/">
+                <FaIcons.FaTwitter />
+              </a>
+              <a href="/">
+                <FaIcons.FaGithub />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </IconContext.Provider>
+    </>
+  );
 }
