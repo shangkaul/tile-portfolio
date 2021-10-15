@@ -9,8 +9,8 @@ export default function App(props, state) {
   return (
     <div className="App">
      <div className="content">
-     <Container>
-     <Row>
+     <Container>   
+      <Row>
       <Col sm={{ span: 3, offset: 1 }} xs={6}><Link style={{textDecoration:'none'}} to='/about'><div className="tile"><div className="tileContent">Home</div></div></Link></Col>
       <Col sm={3} xs={6}><Link style={{textDecoration:'none'}} to='/about'><div className="tile"><div className="tileContent">About</div></div></Link></Col>
       <Col sm={3} xs={6}><Link style={{textDecoration:'none'}} to='/about'><div className="tile"><div className="tileContent">Projects</div></div></Link></Col>
