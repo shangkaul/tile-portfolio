@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import './designerCarousel.css';
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -22,7 +22,18 @@ const responsive = {
 };
 const DesignCarousel = () => {
   return (
-    <Carousel responsive={responsive}>
+    <div className="carouselContainer">
+    <Carousel 
+     additionalTransfrom={0}
+     draggable={false}
+     infinite={true}
+     itemClass="carousel-item-padding-my"
+     customTransition="all .8s"
+     customTransition="all 1s linear"
+     minimumTouchDrag={80}
+     renderButtonGroupOutside={true}
+     slidesToSlide={4}
+     responsive={responsive}>
       <img src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
       />
       <img src="https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
@@ -48,6 +59,7 @@ const DesignCarousel = () => {
       <img src="https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
       />
     </Carousel>
+    </div>
   )
 }
 
