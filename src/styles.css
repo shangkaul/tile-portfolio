@@ -1,42 +1,51 @@
-.content {
-  display: flex;
-  margin-left: 20vw;
-  margin-top: 5vh;
+.content{
+    position: relative;
+    margin-left: 20vw ;
+    margin-top: 5vh;
 }
-.row {
-  height: 90vh;
+.row{
+    height: 90vh;
 }
-.col-sm-3 {
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-  overflow: hidden;
+.col-sm-3{
+    padding: 0.5rem 0.5rem;
+    margin:1.0rem;
+    text-align: center;
+    overflow: hidden;
+  
 }
 
-.tile {
-  margin-bottom: auto;
-  background: url("1.jpg");
-  background-size: cover;
-  height: 100%;
+.Link{
+ text-decoration: none;
 }
-.tile > .tileContent {
-  color: transparent;
-  background: transparent;
-  padding-top: 40%;
-  height: 100%;
+.tile{
+    margin-bottom: auto;
+    background:url('1.jpg');
+    background-size: cover;
+    height: 100%;
 }
-.tile > .tileContent:hover {
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-  transition: ease-in 0.5s;
-  font-weight: 800;
-  font-size: 1rem;
-  height: 100%;
+.tile > .tileContent{
+    color:transparent;
+    background: transparent;
+    padding-top: 30%;
+    height: 100%;
+}
+.tile > .tileContent:hover{
+    background-color: white;
+    opacity: 0.5;
+    color:black;
+    transition: ease-in 0.5s;
+    font-weight: 800;
+    font-size: 1rem;
+    height: 100%;
+    border-bottom-left-radius: 5rem;
+    border-top-right-radius: 5rem;
 }
 @media screen and (max-width: 1024px) {
-  .content {
-    margin-left: 3rem;
-    max-width: 75vw;
-    overflow: hidden;
+    
+    .content{
+        margin-top: 25vh;
+        margin-left: 3rem;
+        max-width: 75vw;
+        overflow: hidden;
+    }
   }
-}
