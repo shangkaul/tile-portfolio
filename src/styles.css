@@ -5,6 +5,7 @@
 }
 .row{
     height: 90vh;
+    
 }
 .col-sm-3{
     padding: 0.5rem 0.5rem;
@@ -13,8 +14,7 @@
     overflow: hidden;
   
 }
-
-.Link{
+.linkText{
  text-decoration: none;
 }
 .tile{

@@ -11,15 +11,15 @@ export default function App(props, state) {
      <div className="content">
      <Container>   
       <Row>
-      <Col sm={{ span: 3, offset: 1 }} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Home</div></div></Link></Col>
-      <Col sm={3} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">About</div></div></Link></Col>
-      <Col sm={3} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Projects</div></div></Link></Col>
-      <Col sm={{ span: 3, offset: 1 }} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Work</div></div></Link></Col>
-      <Col sm={3} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Services</div></div></Link></Col>
-      <Col sm={3} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Gallery</div></div></Link></Col>
-      <Col sm={{ span: 3, offset: 1 }} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Clients</div></div></Link></Col>
-      <Col sm={3} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Testimonials</div></div></Link></Col>
-      <Col sm={3} xs={6}><Link to='/about'><div className="tile"><div className="tileContent">Contact</div></div></Link></Col>
+      <Col sm={{ span: 3, offset: 1 }} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Home</div></div></Link></Col>
+      <Col sm={3} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">About</div></div></Link></Col>
+      <Col sm={3} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Projects</div></div></Link></Col>
+      <Col sm={{ span: 3, offset: 1 }} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Work</div></div></Link></Col>
+      <Col sm={3} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Services</div></div></Link></Col>
+      <Col sm={3} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Gallery</div></div></Link></Col>
+      <Col sm={{ span: 3, offset: 1 }} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Clients</div></div></Link></Col>
+      <Col sm={3} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Testimonials</div></div></Link></Col>
+      <Col sm={3} xs={6}><Link className="linkText" to='/about'><div className="tile"><div className="tileContent">Contact</div></div></Link></Col>
     </Row>
 </Container>
      </div>
