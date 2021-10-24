@@ -85,10 +85,15 @@
 @media screen and (max-width: 1024px) {
     
     .content{
-        margin-top: 25vh;
-        margin-left: 3rem;
-        max-width: 75vw;
-        overflow: hidden;
+        position: absolute;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        margin-top: 15vh!important;
+        max-width: 90vw;
+    }
+    .row{
+        height: 90vh;
+        width: 90vw;
     }
   }
   @media screen and (max-width: 1600px) {

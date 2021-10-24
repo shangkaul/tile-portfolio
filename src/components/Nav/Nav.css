@@ -53,6 +53,11 @@
     text-align: left;
     list-style: none;
 }
+.logo:hover {
+    color: white;
+    text-align: left;
+    list-style: none;
+}
 .footer{
     position: absolute;
     bottom: 15px;
