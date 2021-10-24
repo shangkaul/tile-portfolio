@@ -1,0 +1,135 @@
+:root{
+    --primary:rgba(255, 255, 255, .7);
+}
+
+.Nav{
+    height: 100%;
+    width:fit-content;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:0;
+    background-color: black;
+    transition: 0.5s ease;
+    overflow-x: hidden;
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 3rem;
+    padding-left: 1rem;
+    padding-right: 5rem;
+
+}
+.logo > li{
+    color:white;
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0rem 1rem;
+    list-style: '>';
+
+}
+.logo > li{
+    color:white;
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0rem 1rem;
+    list-style: '>';
+
+}
+.logo{
+    margin-bottom: 3rem;
+}
+.Nav > li {
+    color: var(--primary);
+    text-align: left;
+    padding: 1.2rem 2rem 0.1rem 2rem;
+    list-style: none;
+}
+.Nav > li:hover {
+    color: white;
+    text-align: left;
+    list-style: none;
+}
+.footer{
+    position: absolute;
+    bottom: 15px;
+    font-size: 1.2rem;
+}
+.footer >a{
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0 0.5rem;
+}
+.footer >a:hover{
+    color: white;
+}
+.link{
+    text-decoration: none;
+    color: var(--primary);
+}
+.link:hover{
+    color: white;
+}
+
+.navBtn{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    
+    .Nav{
+    height: fit-content;
+    width:100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:0;
+    background-color: black;
+    transition: 0.5s ease;
+    padding-top:20px;
+    padding-left:20px;
+    align-items: left;
+    padding: 0;
+    display: inline-block;
+
+    }
+    /* .Nav > li {
+        color: var(--primary);
+        padding: 1rem;
+        list-style: none;
+        display: inline-block;
+        border-bottom: none;
+    } */
+    .Nav > li {
+        color: var(--primary);
+        padding: 1rem;
+        list-style: none;
+        display: inline-block;
+        border-bottom: none;
+        display: none;
+    }
+    .footer{
+        display: none;
+    }      
+    .logo > li{
+        padding:0;
+        
+    }
+    .logo{
+        margin:0;
+        color: white;
+    }
+    .navBtn{
+        display: inline-block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        
+    }
+  }
