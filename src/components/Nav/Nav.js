@@ -1,10 +1,28 @@
 import "./Nav.css";
 import {FaLinkedin, FaEnvelope, FaInstagram, FaGithub} from "react-icons/fa";
-import {AiOutlineMenu} from "react-icons/ai";
+import {AiOutlineMenu,AiOutlineClose} from "react-icons/ai";
 import { Link } from "react-router-dom";
+
+import { useState } from "react";
 
 export default function Nav(props)
 {
+    const [style, setStyle] = useState("navHide");
+    const [navIcon, setnavIcon] = useState(true);
+    const changeStyle = () => {
+        
+        if (style == "navHide")
+        {
+            setnavIcon(false);
+            setStyle("navShow");
+        }
+        else
+        {
+            setnavIcon(true);
+            setStyle("navHide");
+        }
+
+      };
    return(
        <div className="Nav">
            <div className="logo">
@@ -27,7 +45,17 @@ export default function Nav(props)
                <a href="https://github.com/shangkaul"><FaGithub/></a>
 
            </div>
-           <div className="navBtn"><AiOutlineMenu/></div>
+           <div className="navBtn" onClick={changeStyle}>{navIcon ? <AiOutlineMenu/> : <AiOutlineClose /> }</div>
+           <ul className={style}>
+           <li><Link to='/' className="link"> Home </Link></li>
+           <li><Link to='/about' className="link">About </Link></li>
+           <li><Link to='/about' className="link">Work </Link></li>
+           <li><Link to='/about' className="link">Projects </Link></li>
+           <li><Link to='/about' className="link">Resume </Link></li>
+           <li><Link to='/about' className="link">Services </Link></li>
+           <li><Link to='/about' className="link">Blog </Link></li>
+           <li><Link to='/about' className="link">Contact </Link></li>
+           </ul>
        </div>
    )    
 }

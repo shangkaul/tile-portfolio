@@ -22,22 +22,18 @@
 
 }
 .logo > li{
-    color:white;
+    color:white!important;
     list-style: none;
     font-size: 1.5rem;
     text-align: left;
     padding: 0rem 1rem;
     list-style: '>';
+    text-transform: uppercase;
+
 
 }
-.logo > li{
-    color:white;
-    list-style: none;
-    font-size: 1.5rem;
-    text-align: left;
-    padding: 0rem 1rem;
-    list-style: '>';
-
+.logo > li > .link{
+    color:white!important;
 }
 .logo{
     margin-bottom: 3rem;
@@ -47,6 +43,10 @@
     text-align: left;
     padding: 1.2rem 2rem 0.1rem 2rem;
     list-style: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: Roboto Condensed,sans-serif;
+    font-size: small;
 }
 .Nav > li:hover {
     color: white;
@@ -73,7 +73,7 @@
 }
 .link{
     text-decoration: none;
-    color: var(--primary);
+    color: var(--primary); 
 }
 .link:hover{
     color: white;
@@ -81,6 +81,15 @@
 
 .navBtn{
     display: none;
+}
+
+.navHide{
+    display: none;
+    transition: ease-in 2s;
+}
+.navShow{
+    display: none;
+    transition: ease-in 2s;
 }
 @media screen and (max-width: 1024px) {
     
@@ -100,13 +109,6 @@
     display: inline-block;
 
     }
-    /* .Nav > li {
-        color: var(--primary);
-        padding: 1rem;
-        list-style: none;
-        display: inline-block;
-        border-bottom: none;
-    } */
     .Nav > li {
         color: var(--primary);
         padding: 1rem;
@@ -119,11 +121,13 @@
         display: none;
     }      
     .logo > li{
-        padding:0;
+        padding:0rem;
+        letter-spacing: 2px;
         
     }
     .logo{
         margin:0;
+        padding: 0.5rem;
         color: white;
     }
     .navBtn{
@@ -135,6 +139,39 @@
         font-size: 2rem;
         padding-right: 0.5rem;
         padding-top: 0.5rem;
+        cursor: pointer;
         
     }
+
+    .navHide{
+        display: none;
+        transition: ease-in 1s;
+    }
+    .navShow{
+        display: block;
+        transition: ease-in 1s;
+        list-style: none;
+        padding:0;
+        margin: 0;
+    }
+
+    .navShow>.link{
+        text-decoration: none;
+        color: var(--primary); 
+    }
+    .navShow>.link:hover{
+        color: white;
+    }
+
+    .navShow> li{
+        padding-top: 1rem;
+        padding: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        text-transform: uppercase;
+        font-family: Roboto Condensed, sans-serif;
+        font-size: small;
+        letter-spacing: 2px;
+        
+    }
+
   }
