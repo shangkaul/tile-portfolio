@@ -1,51 +1,195 @@
-.content{
-    position: relative;
-    margin-left: 20vw ;
-    margin-top: 5vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.row{
-    height: 90vh;
-    
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
 }
-.col-sm-3{
-    padding: 0.5rem 0.5rem;
-    margin:1.0rem;
-    text-align: center;
-    overflow: hidden;
-  
+
+.App {
+  min-height: 100vh;
 }
-.linkText{
- text-decoration: none;
+
+.content {
+  position: relative;
+  margin-left: 280px;
+  padding: 2rem;
+  min-height: 100vh;
 }
-.tile{
-    margin-bottom: auto;
-    background:url('1.jpg');
-    background-size: cover;
-    height: 100%;
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
 }
-.tile > .tileContent{
-    color:transparent;
-    background: transparent;
-    padding-top: 30%;
-    height: 100%;
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.tile > .tileContent:hover{
-    background-color: white;
-    opacity: 0.5;
-    color:black;
-    transition: ease-in 0.5s;
-    font-weight: 800;
-    font-size: 1rem;
-    height: 100%;
-    border-bottom-left-radius: 5rem;
-    border-top-right-radius: 5rem;
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tiles-grid {
+  min-height: 60vh;
+  gap: 1rem;
+}
+
+.col-sm-3 {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.linkText {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.tile {
+  height: 180px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.8) 0%, rgba(124, 58, 237, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.tile:hover::before {
+  opacity: 1;
+}
+
+.tile:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual tile backgrounds */
+.home-tile { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.about-tile { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.projects-tile { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.work-tile { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.skills-tile { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.gallery-tile { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.blog-tile { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+.achievements-tile { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.contact-tile { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+
+.tileContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all 0.4s ease;
+  opacity: 0.9;
+}
+
+.tile:hover .tileContent {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 @media screen and (max-width: 1024px) {
-    
-    .content{
-        margin-top: 25vh;
-        margin-left: 3rem;
-        max-width: 75vw;
-        overflow: hidden;
-    }
+  .content {
+    margin-left: 0;
+    margin-top: 80px;
+    padding: 1rem;
   }
+
+  .hero-section {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .tiles-grid {
+    min-height: auto;
+  }
+
+  .col-sm-3 {
+    margin: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .tile {
+    height: 120px;
+  }
+
+  .tileContent {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .tile {
+    height: 100px;
+  }
+
+  .tileContent {
+    font-size: 0.9rem;
+  }
+}
